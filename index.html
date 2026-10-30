@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Third Life Software</title>
+<meta name="description" content="Custom software, data warehouses, integrations and reporting for hedge funds and private equity firms. Over twenty years, more than 50 funds, AI-assisted development.">
+<link rel="canonical" href="https://www.thirdlifesoftware.com/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Third Life Software">
+<meta property="og:description" content="Experienced financial systems engineering. Faster development with AI. Custom software for alternative asset managers.">
+<meta property="og:url" content="https://www.thirdlifesoftware.com/">
+<meta name="theme-color" content="#1f2730">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1f2730; --slate:#3b4654; --steel:#5e7a9a; --steel-ink:#4a6684;
+  --muted:#5b6673; --soft:#f3f5f7; --line:#dde2e7; --line-dark:#cfd6de;
+  --on-dark:#d6dde5; --on-dark-muted:#aebccb; --bar-dark:#36414e;
+  --sans:'Manrope',system-ui,'Segoe UI',Helvetica,Arial,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:var(--steel-ink);text-decoration:none}
+a:hover{color:var(--ink)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--steel);outline-offset:3px}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:1160px;margin:0 auto;padding-left:24px;padding-right:24px}
+.kicker{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--steel)}
+.h2{font-size:clamp(28px,3.2vw,40px);line-height:1.15;font-weight:700;letter-spacing:-.025em}
+.h3{font-size:19px;font-weight:700;letter-spacing:-.01em}
+.lead{font-size:17px;line-height:1.55;color:var(--slate)}
+.body{font-size:15.5px;line-height:1.55;color:var(--slate)}
+.mark{display:block;flex:none}
+.wordmark{font-weight:700;letter-spacing:-.02em;line-height:1}
+.wordmark .third{color:var(--steel)}
+.wordmark .soft{font-weight:500;letter-spacing:0}
+.dark{background:var(--ink);color:#fff}
+.dark a{color:var(--on-dark)}
+.dark a:hover{color:#fff}
+
+/* header */
+.header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;min-height:76px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff}
+.brand .wordmark{font-size:18px}
+.nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font-size:15px;font-weight:500}
+.nav a{padding:10px 0}
+.nav .cta{color:var(--ink);background:#fff;padding:11px 18px;border-radius:6px;font-weight:700}
+.nav .cta:hover{color:var(--ink);background:var(--on-dark)}
+
+/* hero */
+.hero .wrap{padding-top:72px;padding-bottom:80px;display:flex;flex-wrap:wrap;align-items:center;gap:48px}
+.hero-copy{flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:24px}
+.hero .kicker{color:var(--on-dark-muted)}
+.hero h1{font-size:clamp(36px,5vw,60px);line-height:1.08;font-weight:700;letter-spacing:-.03em}
+.hero .lead{font-size:19px;color:var(--on-dark);max-width:620px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;padding-top:8px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:6px;font-size:16px;font-weight:700}
+.btn-primary{background:var(--steel);color:#fff}
+.btn-primary:hover{background:var(--steel-ink);color:#fff}
+.btn-ghost{border:1px solid var(--muted);color:#fff;font-weight:600}
+.btn-ghost:hover{border-color:#fff;color:#fff}
+.hero-mark{flex:0 1 300px;min-width:200px;display:flex;justify-content:center}
+@media (max-width:640px){.hero-mark{display:none}}
+
+/* glance */
+.glance{border-bottom:1px solid var(--line)}
+.glance .wrap{padding-top:36px;padding-bottom:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:24px 48px}
+.stat{display:flex;flex-direction:column;gap:6px}
+.stat b{font-family:var(--mono);font-size:34px;line-height:1;font-weight:500}
+.stat span{font-size:15px;line-height:1.4;color:var(--muted)}
+
+/* what */
+.what .wrap{padding-top:88px;padding-bottom:40px;display:flex;flex-direction:column;gap:40px}
+.intro{display:flex;flex-direction:column;gap:12px;max-width:720px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:20px}
+.card{display:flex;flex-direction:column;gap:10px;padding:28px;background:var(--soft);border-radius:8px}
+.card.outline{background:#fff;border:1px solid var(--line)}
+.card a{font-size:15px;font-weight:700;padding-top:4px}
+
+/* how */
+.how{background:var(--soft);margin-top:48px}
+.how .wrap{padding-top:88px;padding-bottom:88px;display:flex;flex-wrap:wrap;gap:48px 64px}
+.how-copy{flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:16px}
+.steps{flex:1 1 440px;min-width:0;margin:0;padding:0;list-style:none;display:flex;flex-direction:column}
+.steps li{display:flex;gap:20px;padding:22px 0;border-top:1px solid var(--line-dark)}
+.steps li:last-child{border-bottom:1px solid var(--line-dark)}
+.steps .n{font-family:var(--mono);font-size:14px;color:var(--steel);padding-top:4px;min-width:28px}
+.steps .t{display:flex;flex-direction:column;gap:6px}
+
+/* work */
+.work .wrap{padding-top:88px;padding-bottom:88px;display:flex;flex-direction:column;gap:40px}
+.project{display:flex;flex-wrap:wrap;gap:16px 48px;padding:32px 0;border-top:1px solid var(--line)}
+.project:last-child{border-bottom:1px solid var(--line)}
+.project-head{flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:8px}
+.project-head h3{font-size:22px;font-weight:700;letter-spacing:-.015em}
+.fact{font-family:var(--mono);font-size:13px;color:var(--steel)}
+.project-body{flex:2 1 420px;min-width:0;display:flex;flex-direction:column;gap:12px;font-size:16px;line-height:1.55;color:var(--slate)}
+.project-body a{font-weight:700}
+
+/* tech */
+.tech .wrap{padding-top:64px;padding-bottom:64px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:32px 48px}
+.tech .col{display:flex;flex-direction:column;gap:10px}
+.tech .kicker{color:var(--on-dark-muted)}
+.tech p{font-size:16px;line-height:1.6;color:var(--on-dark)}
+
+/* about */
+.about .wrap{padding-top:88px;padding-bottom:88px;display:flex;flex-wrap:wrap;gap:40px 64px}
+.about-head{flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:12px}
+.about-body{flex:1.4 1 420px;min-width:0;display:flex;flex-direction:column;gap:16px;font-size:17px;line-height:1.6;color:var(--slate)}
+.about-body strong{font-weight:700;color:var(--ink)}
+
+/* contact */
+.contact{background:var(--soft)}
+.contact .wrap{padding-top:88px;padding-bottom:88px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:32px 48px}
+.contact-copy{flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:12px}
+.contact-act{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.btn-dark{background:var(--ink);color:#fff;min-height:52px;padding:0 26px;font-size:17px}
+.btn-dark:hover{background:var(--slate);color:#fff}
+.contact-act span{font-size:15px;color:var(--muted)}
+
+/* footer */
+.footer{border-top:1px solid var(--line)}
+.footer .wrap{padding-top:28px;padding-bottom:28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 32px;font-size:14px;color:var(--muted)}
+.footer .brand{color:var(--slate);gap:10px}
+.footer .wordmark{font-size:14px}
+.footer .links{display:flex;flex-wrap:wrap;gap:8px 24px}
+</style>
+</head>
+<body>
+
+<header class="header dark">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Third Life Software, home">
+      <svg class="mark" width="28" height="30" viewBox="0 0 100 108" aria-hidden="true"><rect x="0" y="18" width="24" height="90" fill="#aebccb"/><rect x="38" y="18" width="24" height="90" fill="#aebccb"/><rect x="76" y="0" width="24" height="90" fill="#5e7a9a"/></svg>
+      <span class="wordmark"><span class="third">Third</span>Life <span class="soft">Software</span></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#what">What we build</a>
+      <a href="#how">How we work</a>
+      <a href="#work">Selected work</a>
+      <a href="#about">About</a>
+      <a class="cta" href="mailto:cody@thirdlifesoftware.com">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero dark">
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="kicker">Custom software for alternative asset managers</p>
+      <h1>Experienced financial systems engineering. Faster development with AI.</h1>
+      <p class="lead">Third Life Software builds custom software for hedge funds, private equity firms and other alternative asset managers. We have over twenty years experience and have worked with more than 50 funds. AI-assisted development lets us build production software in a fraction of the time at a fraction of the cost.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:cody@thirdlifesoftware.com">Start a conversation</a>
+        <a class="btn btn-ghost" href="#work">See selected work</a>
+      </div>
+    </div>
+    <div class="hero-mark" aria-hidden="true">
+      <svg width="220" height="238" viewBox="0 0 100 108"><rect x="0" y="18" width="24" height="90" fill="#36414e"/><rect x="38" y="18" width="24" height="90" fill="#36414e"/><rect x="76" y="0" width="24" height="90" fill="#5e7a9a"/></svg>
+    </div>
+  </div>
+</section>
+
+<section class="glance" aria-label="At a glance">
+  <div class="wrap">
+    <div class="stat"><b>20+ years</b><span>building financial systems, starting at Microsoft</span></div>
+    <div class="stat"><b>50+ funds</b><span>hedge funds, private equity managers and institutional investors</span></div>
+    <div class="stat"><b>350 hours</b><span>for a platform migration estimated at 1,500 to 2,000 hours</span></div>
+  </div>
+</section>
+
+<section class="what" id="what">
+  <div class="wrap">
+    <div class="intro">
+      <p class="kicker">What we build</p>
+      <h2 class="h2">Most of our work falls into five areas</h2>
+      <p class="lead">Delta Recon, our reconciliation product, came out of the same work.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3 class="h3">Investment management applications</h3>
+        <p class="body">Security master, portfolio monitoring, treasury, risk, compliance and operational workflow systems. Usually the thing a spreadsheet has been doing for too long.</p>
+      </div>
+      <div class="card">
+        <h3 class="h3">Data integration</h3>
+        <p class="body">Portfolio accounting, trading, risk, fund administration and whatever else holds the data. Ingestion, transformation, validation and automated processing, with failures surfaced rather than hidden.</p>
+      </div>
+      <div class="card">
+        <h3 class="h3">Data warehousing</h3>
+        <p class="body">Accounting, administrator, trading, risk and market data in one time-series single source of truth, so every report and every downstream system reads the same numbers. This is the work we have done most: two decades of warehouses for hedge funds and private equity managers, including the one behind the Geneva migration below.</p>
+      </div>
+      <div class="card">
+        <h3 class="h3">Reporting and analytics</h3>
+        <p class="body">Financial reporting, portfolio analytics, operational dashboards and automated report runs. Legacy reporting and complex Excel processes modernized, which usually means migrated and then retired.</p>
+      </div>
+      <div class="card">
+        <h3 class="h3">Workflow automation</h3>
+        <p class="body">Reconciliations, data validation, exception management, approvals and the recurring processes someone currently runs by hand.</p>
+      </div>
+      <div class="card outline">
+        <h3 class="h3">Delta Recon</h3>
+        <p class="body">Our reconciliation and operational controls product. Configurable matching, automated integrations, AI-assisted setup and break analysis. Built with the same process we use for client work.</p>
+        <a href="https://deltarecon.ai">deltarecon.ai</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="how-copy">
+      <p class="kicker">How we work</p>
+      <h2 class="h2">Senior engineers, working directly with you</h2>
+      <p class="lead">Custom financial software used to be expensive and slow: several developers, long schedules and a lot of coordination. That has changed. AI-assisted development is not a demo for us. It is how the projects below were built.</p>
+      <p class="lead">Every project is led by a senior engineer who works directly with you. Specialists are brought in when a project needs them.</p>
+    </div>
+    <ol class="steps">
+      <li><span class="n">01</span><div class="t"><h3 class="h3">Discovery and design</h3><p class="body">We sit with the people who do the work and learn the systems, the data, the workflows and the problems. Together we define the end state and agree how to get there.</p></div></li>
+      <li><span class="n">02</span><div class="t"><h3 class="h3">Rapid prototyping</h3><p class="body">A working prototype arrives in days, so you can judge the approach before committing to the full build.</p></div></li>
+      <li><span class="n">03</span><div class="t"><h3 class="h3">Iterative development</h3><p class="body">Once the approach is agreed, we set up the environment and the delivery process. Working software ships early and is refined through regular feedback from the people using it.</p></div></li>
+      <li><span class="n">04</span><div class="t"><h3 class="h3">Engineering oversight</h3><p class="body">AI writes much of the code. An experienced engineer owns all of it: architecture, review, testing and deployment. Everything lives in secure, version-controlled repositories.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="intro">
+      <p class="kicker">Selected work</p>
+      <h2 class="h2">Three recent projects</h2>
+    </div>
+    <div>
+      <article class="project">
+        <div class="project-head">
+          <h3>Accounting system migration and data warehouse</h3>
+          <p class="fact">About 350 hours. Estimated 1,500 to 2,000 the old way.</p>
+        </div>
+        <div class="project-body">
+          <p>A fund moved from an in-house Geneva accounting system to its fund administrator's platform. We designed and built the data warehouse and migrated about 50 reports and data extracts.</p>
+          <p>The work took about 350 hours with AI-assisted development. On similar projects before that, the same scope took 1,500 to 2,000.</p>
+        </div>
+      </article>
+      <article class="project">
+        <div class="project-head">
+          <h3>Delta Recon: AI-assisted reconciliation and operational controls</h3>
+          <p class="fact">Built part-time in under three months</p>
+        </div>
+        <div class="project-body">
+          <p>Delta Recon is our reconciliation and operational controls product: configurable reconciliation engines, automated data integrations, AI-assisted configuration and break analysis, exception management and operational dashboards.</p>
+          <p>It had been on the list for years. With AI-assisted development it was built part-time in under three months. <a href="https://deltarecon.ai">deltarecon.ai</a></p>
+        </div>
+      </article>
+      <article class="project">
+        <div class="project-head">
+          <h3>Investran report comparison and migration automation</h3>
+          <p class="fact">In use at three large investment firms</p>
+        </div>
+        <div class="project-body">
+          <p>An Investran upgrade means re-validating every report. This platform runs the reports on both versions, finds the differences and uses AI to classify each one and explain what to fix.</p>
+          <p>Three large investment firms use it. It took most of the manual effort out of validating reports during their upgrades.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="tech dark" aria-label="Technology and platform experience">
+  <div class="wrap">
+    <div class="col"><p class="kicker">Financial systems</p><p>Geneva, Investran, fund administrator platforms, trading and portfolio accounting systems.</p></div>
+    <div class="col"><p class="kicker">Engineering and data</p><p>Microsoft Azure, .NET, C#, SQL Server, Python, data warehousing, APIs and enterprise integrations.</p></div>
+    <div class="col"><p class="kicker">Reporting and automation</p><p>Excel, VBA, financial reporting, workflow automation and AI-assisted development.</p></div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-head">
+      <p class="kicker">About</p>
+      <h2 class="h2">A small engineering firm, since 2010</h2>
+    </div>
+    <div class="about-body">
+      <p>Third Life Software builds custom technology for hedge funds, private equity managers and other institutional investors. More than 50 funds so far, from small shops to some of the most complex books in the industry.</p>
+      <p><strong>Cody Robertson</strong> founded the firm in New York in 2010. He started as a software engineer at Microsoft, consulted for venture-funded startups in the Bay Area, then spent eight years in New York building data warehouse and reporting platforms for some of the most prominent hedge funds in the world. He is back in the Bay Area now. BA in Business Administration and Management Information Systems, Western Washington University.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-copy">
+      <h2 class="h2">Start with a conversation</h2>
+      <p class="lead">Replacing a manual process, connecting systems, modernizing reporting or building something new. Send a note and we will talk it through.</p>
+    </div>
+    <div class="contact-act">
+      <a class="btn btn-dark" href="mailto:cody@thirdlifesoftware.com">cody@thirdlifesoftware.com</a>
+      <span>Piedmont, California</span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="brand">
+      <svg class="mark" width="18" height="20" viewBox="0 0 100 108" aria-hidden="true"><rect x="0" y="18" width="24" height="90" fill="#3b4654"/><rect x="38" y="18" width="24" height="90" fill="#3b4654"/><rect x="76" y="0" width="24" height="90" fill="#5e7a9a"/></svg>
+      <span class="wordmark"><span class="third">Third</span>Life <span class="soft">Software</span></span>
+    </div>
+    <div class="links">
+      <a href="https://deltarecon.ai">Delta Recon</a>
+      <a href="mailto:cody@thirdlifesoftware.com">cody@thirdlifesoftware.com</a>
+      <span>&copy; 2026 Third Life Software</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
