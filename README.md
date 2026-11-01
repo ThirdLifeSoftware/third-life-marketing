@@ -27,8 +27,12 @@ The company one-pager at US Letter. `index.html` is the print-ready source;
 open it in a browser and print to PDF, or regenerate the PDF with headless Edge:
 
 ```powershell
-& "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --headless=new --disable-gpu --no-pdf-header-footer --virtual-time-budget=8000 --print-to-pdf="$PWD\one-pager\Third-Life-Software-one-pager.pdf" "file:///$($PWD -replace '\\','/')/one-pager/index.html"
+& "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --headless=new --disable-gpu --user-data-dir="$env:TEMP\edge-pdf" --no-first-run --no-pdf-header-footer --virtual-time-budget=10000 --print-to-pdf="$PWD\one-pager\Third-Life-Software-one-pager.pdf" "file:///$($PWD -replace '\\','/')/one-pager/index.html"
+Get-Item .\one-pager\Third-Life-Software-one-pager.pdf | Select-Object LastWriteTime
 ```
+
+The separate `--user-data-dir` matters. Without it, an open Edge window takes the
+request and nothing is written. Check the timestamp after running it.
 
 Both pieces were designed on a Claude Design canvas; the HTML here is the hand-built
 version and is the source of record.
